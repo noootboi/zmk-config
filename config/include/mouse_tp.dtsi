@@ -105,7 +105,7 @@
     &mouse_ps2 {
 
       // How sensitive the TP is (Default: 128)
-      tp-sensitivity = <64>;
+      tp-sensitivity = <96>;
 
 
       // The maximum mouse movement speed the TP will accelarate to
@@ -131,7 +131,7 @@
       //
       // Alternatively consider achieving the same effect using the
       //  `input-listener` settings below.
-      // tp-xy-swap;
+       tp-xy-swap;
        tp-x-invert;
        tp-y-invert;
 
