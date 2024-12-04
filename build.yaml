@@ -5,34 +5,12 @@
 # pass flags to the build command and `artifact-name` to assign a name to
 # distinguish build outputs from each other:
 #
-# board: [ "nice_nano_v2" ]
-# shield: [ "corne_left", "corne_right" ]
-# include:
-#   - board: bdn9_rev2
-#   - board: nice_nano_v2
-#     shield: reviung41
-#   - board: nice_nano_v2
-#     shield: corne_left
-#     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
-#     artifact-name: corne_left_with_logging
-#
 ---
 include:
   - board: nice_nano_v2
-    shield: corne_tp_left
+    shield: yk_do52pro_left
   - board: nice_nano_v2
-    shield: corne_tp_right
-
-  # Alternative PINs firmware
-  # This builds an additional firmware for the right half that overrides the
-  # pins configured in `corne_tp_right.overlay` and creates a firmware that
-  # uses the high frequency pins D1 for SCL and D2 for SDA.
-  #
-  # You can remove this entry in your own zmk-config.
-  #- board: nice_nano_v2
-  #  shield: corne_tp_right
-  #  cmake-args: -DDTS_EXTRA_CPPFLAGS=-DMOUSE_PS2_ALT_PINS
-  #  artifact-name: corne_tp_right-nice_nano_v2-scl_D1_sda_D0-zmk
+    shield: yk_do52pro_right
 
   # Settings Reset firmware
   # This will build a firmware that can wipe all settings from your

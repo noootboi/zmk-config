@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "corne_tp.dtsi"
+#include "yk_do52pro.dtsi"
 
 &kscan0 {
     col-gpios
