@@ -33,10 +33,10 @@ manifest:
     # pete's zmk fork with the most up to date mouse PR, which is more
     # up-to-date, but may contain incompatibilities with the PS/2 mouse & TP
     # driver module.
-     - name: zmk
-       remote: petejohanson
-       revision: feat/pointers-move-scroll
-       import: app/west.yml
+    # - name: zmk
+    #   remote: petejohanson
+    #   revision: feat/pointers-move-scroll
+    #   import: app/west.yml
 
     - name: zmk
       remote: petejohanson
