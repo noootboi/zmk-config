@@ -1,14 +1,13 @@
 file_format: "1"
-id: corne_tp
-name: Corne TP
+id: yk_do52pro
+name: YK D052Pro
 type: shield
-url: https://github.com/foostan/crkbd/
+url: https://github.com/filippor/kb_zmk_ps2_mouse_trackpoint_driver-zmk_config
 requires: [pro_micro]
-exposes: [i2c_oled]
+exposes: []
 features:
   - keys
-  - display
-  - underglow
+  - studio
 siblings:
   - yk_do52pro_left
   - yk_do52pro_right
