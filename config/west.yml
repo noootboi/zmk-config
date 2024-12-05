@@ -38,6 +38,11 @@ manifest:
        revision: feat/pointers-move-scroll
        import: app/west.yml
 
+    - name: zmk
+      remote: petejohanson
+      revision: feat/pointers-with-input-processors
+      import: app/west.yml
+
     # urob's zmk fork with mouse PR & many extra features, but may be
     # incompatible with the PS/2 mouse & TP driver module.
     # - name: zmk
