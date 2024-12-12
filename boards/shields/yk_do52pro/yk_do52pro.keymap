@@ -31,9 +31,8 @@
 #define FUNCTION  5
 #define CONFIG    6
 #define MOUSE_TP  7
-#define SCROLL_TP 8
-#define MOUSE     9
-
+#define MOUSE     8
+#define SCROLL_TP 9
 
 #ifdef HAS_MOUSE_KEYS
   #include <dt-bindings/zmk/mouse.h>
@@ -79,7 +78,7 @@
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             tapping-term-ms = <280>;
-            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            quick-tap-ms = <200>;                // repeat on tap-into-hold
             require-prior-idle-ms = <150>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
@@ -92,7 +91,7 @@
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             tapping-term-ms = <280>;
-            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            quick-tap-ms = <200>;                // repeat on tap-into-hold
             require-prior-idle-ms = <150>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
@@ -103,7 +102,7 @@
             compatible = "zmk,behavior-hold-tap";
              flavor = "balanced";
             tapping-term-ms = <280>;
-            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            quick-tap-ms = <200>;                // repeat on tap-into-hold
             require-prior-idle-ms = <150>;
             #binding-cells = <2>;
             bindings = <&mo>, <&kp>;
@@ -117,12 +116,12 @@
     Base_layer {
       display-name = "Base";
       bindings = <
-//|-----------------|-------------|-----------|------------|---------------|---------------|   |---------------|-------------|------------|--------------|---------------|------------|
-   &kp GRAVE         &kp N1        &kp N2      &kp N3       &kp N4          &kp N5              &kp N6          &kp N7        &kp N8       &kp N9         &kp N0          &kp MINUS
-   &kp LBKT          &kp Q         &kp W       &kp E        &kp R           &kp T               &kp Y           &kp U         &kp I        &tl MOUSE O    &tl SCROLL_TP P &kp EQUAL
-   &kp RBKT          &hml LMETA A  &hml LALT S &hml LCTRL D &hml LSHIFT F   &kp G               &kp H           &hml LSHIFT J &hmr LCTRL K &hmr LALT L    &hmr LMETA SEMI &kp SQT
-   &kp LSHFT         &kp Z         &hml RALT X &kp C        &kp V           &kp B               &kp N           &kp M         &kp COMMA    &hmr RALT DOT  &kp FSLH        &kp BSLH
-   &tl FUNCTION TAB  &kp LCTRL                              &tl SYMBOL ESC  &tl NUMBER SPACE    &tl NAVIG BSPC  &tl MEDIA DEL                             &kp LALT        &tl CONFIG RET
+//|-----------------|-------------|-----------|------------|---------------|----------------|---------------|   |---------------|-------------|---------------|------------|---------------|---------------|-------------|
+   &kp GRAVE         &kp N1        &kp N2      &kp N3       &kp N4          &kp N5                                              &kp N6          &kp N7        &kp N8       &kp N9          &kp N0          &kp MINUS
+   &kp LBKT          &kp Q         &kp W       &kp E        &kp R           &kp T                                               &kp Y           &kp U         &kp I        &tl SCROLL_TP O &tl MOUSE P &kp EQUAL
+   &kp RBKT          &hml LMETA A  &hml LALT S &hml LCTRL D &hml LSHIFT F   &kp G                                               &kp H           &hml LSHIFT J &hmr LCTRL K &hmr LALT L     &hmr LMETA SEMI &kp SQT
+   &kp LSHFT         &kp Z         &hml RALT X &kp C        &kp V           &kp B                                               &kp N           &kp M         &kp COMMA    &hmr RALT DOT   &kp FSLH        &kp BSLH
+   &tl FUNCTION TAB  &kp LCTRL                              &tl SYMBOL ESC  &tl NUMBER SPACE &tl FUNCTION TAB    &tl CONFIG RET &tl NAVIG BSPC  &tl MEDIA DEL                              &kp LALT        &tl CONFIG RET
                                              // DPAD  Left,     Down,     Middle,            Up,      Right
                                                       &kp LEFT  &kp DOWN  &tl FUNCTION TAB   &kp UP   &kp RIGHT
                                                       &kp LEFT  &kp DOWN  &tl CONFIG RET     &kp UP   &kp RIGHT
@@ -133,12 +132,12 @@
     Nav_layer {
       display-name = "Nav";
          bindings = <
-//|------------|-------------|-----------|-----------|---------------|---------------|   |---------------|-------------|-----------|-------------|---------------|------------|
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans       &kp HOME      &kp PG_UP   &kp PG_DN   &kp END         &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans       &kp LEFT      &kp DOWN    &kp UP      &kp RIGHT       &caps_word          &trans          &kp LSHIFT    &kp LCTRL   &kp LALT      &kp LMETA       &trans
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &kp RALT      &trans          &trans
-   &trans       &trans                                &trans          &trans              &trans          &trans                                  &trans          &trans 
+//|------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans       &kp HOME      &kp PG_UP   &kp PG_DN   &kp END         &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans       &kp LEFT      &kp DOWN    &kp UP      &kp RIGHT       &caps_word                                          &trans          &kp LSHIFT    &kp LCTRL   &kp LALT      &kp LMETA       &trans
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &kp RALT      &trans          &trans
+   &trans       &trans                                &trans          &trans          &trans              &trans          &trans          &trans                                  &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
                                                 &trans     &trans  &trans      &trans  &trans 
@@ -148,12 +147,12 @@
     Num_layer {
       display-name = "Number";
         bindings = <
-//|------------|-------------|-----------|-----------|---------------|---------------|   |---------------|-------------|-------------|-------------|---------------|------------|
-   &kp F12      &kp F1        &kp F2      &kp F3      &kp F4          &kp F5              &kp F6          &kp F7        &kp F8        &kp F9        &kp F10         &kp F11         
-   &trans       &trans        &trans      &trans      &trans          &trans              &kp GRAVE       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL       &trans
-   &trans       &kp LMETA     &kp LALT    &kp LCTRL   &kp LSHIFT      &trans              &kp LBKT        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT         &trans
-   &trans       &trans        &kp RALT    &trans      &trans          &trans              &kp RBKT        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BSLH        &trans
-   &trans       &trans                                &trans          &trans              &kp NUMBER_0    &kp MINUS                                 &trans          &trans 
+//|------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-------------|-------------|---------------|------------|
+   &kp F12      &kp F1        &kp F2      &kp F3      &kp F4          &kp F5                                              &kp F6          &kp F7        &kp F8        &kp F9        &kp F10         &kp F11         
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &kp GRAVE       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL       &trans
+   &trans       &kp LMETA     &kp LALT    &kp LCTRL   &kp LSHIFT      &trans                                              &kp LBKT        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT         &trans
+   &trans       &trans        &kp RALT    &trans      &trans          &trans                                              &kp RBKT        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BSLH        &trans
+   &trans       &trans                                &trans          &trans          &trans              &trans          &kp NUMBER_0    &kp MINUS                                 &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
                                                 &trans     &trans  &trans      &trans  &trans 
@@ -164,12 +163,12 @@
     Symb_layer {
       display-name = "Symbol";
           bindings = <
-//|------------|-------------|-----------|-----------|---------------|---------------|   |---------------|-------------|-----------|-------------|---------------|------------|
-   &kp F12      &kp F1        &kp F2      &kp F3      &kp F4          &kp F5              &kp F6          &kp F7        &kp F8        &kp F9        &kp F10         &kp F11
-   &trans       &trans        &trans      &trans      &trans          &trans              &kp TILDE       &kp AMPERSAND &kp STAR      &kp LPAR      &kp PLUS        &trans
-   &trans       &kp LMETA     &kp LALT    &kp LCTRL   &kp LSHIFT      &trans              &kp LBRC        &kp DOLLAR    &kp PERCENT   &kp CARET     &kp DQT         &trans
-   &trans       &trans        &kp RALT    &trans      &trans          &trans              &kp RBRC        &kp EXCL      &kp AT        &kp HASH      &kp PIPE        &trans
-   &trans       &trans                                &trans          &trans              &kp RPAR        &kp UNDER                                 &trans          &trans 
+//|------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
+   &kp F12      &kp F1        &kp F2      &kp F3      &kp F4          &kp F5                                              &kp F6          &kp F7        &kp F8        &kp F9        &kp F10         &kp F11
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &kp TILDE       &kp AMPERSAND &kp STAR      &kp LPAR      &kp PLUS        &trans
+   &trans       &kp LMETA     &kp LALT    &kp LCTRL   &kp LSHIFT      &trans                                              &kp LBRC        &kp DOLLAR    &kp PERCENT   &kp CARET     &kp DQT         &trans
+   &trans       &trans        &kp RALT    &trans      &trans          &trans                                              &kp RBRC        &kp EXCL      &kp AT        &kp HASH      &kp PIPE        &trans
+   &trans       &trans                                &trans          &trans          &trans              &trans          &kp RPAR        &kp UNDER                                 &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
                                                 &trans     &trans  &trans      &trans  &trans
@@ -179,12 +178,12 @@
   Media_layer {
       display-name = "Media";
          bindings = <
-//|--------------|-------------|-------------|-------------|---------------|---------------|   |---------------|-------------|-----------|-------------|---------------|------------|
-   &studio_unlock &trans        &trans        &trans        &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans         &kp C_BRI_DEC &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_INC   &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans         &trans        &trans        &trans        &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans         &trans        &trans        &trans        &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans         &trans                                    &trans          &trans              &trans          &trans                                  &trans          &trans 
+//|--------------|-------------|-------------|-------------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
+   &studio_unlock &trans        &trans        &trans        &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans         &kp C_BRI_DEC &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_INC   &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans         &trans        &trans        &trans        &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans         &trans        &trans        &trans        &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans         &trans                                    &trans          &trans          &trans              &trans          &trans          &trans                                  &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
                                                 &trans     &trans  &trans      &trans  &trans 
@@ -196,12 +195,12 @@
     Func_layer {
       display-name = "Function";
       bindings = <
-//|------------|-------------|-----------|-----------|---------------|---------------|   |---------------|-------------|-----------|-------------|---------------|------------|
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &kp F7        &kp F8      &kp F9        &kp F10         &trans
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &kp F4        &kp F5      &kp F6        &kp F11         &trans
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &kp F1        &kp F2      &kp F3        &kp F12         &trans
-   &trans       &trans                                &trans          &trans              &trans          &trans                                  &trans          &trans 
+//|------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &kp F7        &kp F8      &kp F9        &kp F10         &trans
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &kp F4        &kp F5      &kp F6        &kp F11         &trans
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &kp F1        &kp F2      &kp F3        &kp F12         &trans
+   &trans       &trans                                &trans          &trans          &trans              &trans          &trans          &trans                                  &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans 
                                                 &trans     &trans  &trans      &trans  &trans
@@ -211,12 +210,12 @@
     Config_layer {
       display-name = "Configuration";
       bindings = <
-//|---------------|-------------|-----------|-----------|---------------|---------------|   |---------------|-------------|-----------|-------------|---------------|------------|
-   &studio_unlock  &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans          &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans          &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans          &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans          &trans                                &trans          &trans              &trans          &trans                                  &trans          &trans 
+//|---------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
+   &studio_unlock  &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans          &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans          &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans          &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans          &trans                                &trans          &trans          &trans              &trans          &trans          &trans                                  &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
                                                 &trans     &trans  &trans      &trans  &trans 
@@ -227,50 +226,50 @@
      Mouse_layer {
       display-name = "Mouse";
       bindings = <
-//|------------|-------------|-----------|-----------|---------------|---------------|   |---------------|-------------|-----------|-------------|---------------|------------|
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &mo MOUSE     &mo SCROLL_TP   &trans
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &mkp MCLK    &trans                                &trans          &trans              &mkp LCLK       &mkp RCLK                               &trans          &mkp MCLK
-                                        // DPAD Left,      Down,   Middle,     Up,     Right
-                                                &none      &none   &mkp MCLK   &trans  &none 
-                                                &none      &none   &mkp MCLK   &trans  &none 
-      >;
-    };
-
-
-
-     Scroll_layer {
-      display-name = "Scroll";
-      bindings = <
-//|------------|-------------|-----------|-----------|---------------|---------------|   |---------------|-------------|-----------|-------------|---------------|------------|
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &mo MOUSE     &none           &trans
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &mkp MCLK    &trans                                &trans          &trans              &mkp LCLK       &mkp RCLK                               &trans          &mkp MCLK 
-                                        // DPAD Left,      Down,   Middle,     Up,     Right
-                                                &trans     &trans  &mkp MCLK   &trans  &trans  
-                                                &trans     &trans  &mkp MCLK   &trans  &trans 
-      >;
-    };
-
+//|------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &mo SCROLL_TP &mo MOUSE       &trans
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &mkp MCLK    &trans                                &trans          &trans          &trans               &mkp MCLK      &mkp LCLK       &mkp RCLK                               &trans          &mkp MCLK 
+                                           // DPAD Left,      Down,   Middle,     Up,     Right
+                                                   &trans     &trans  &mkp MCLK   &trans  &trans  
+                                                   &trans     &trans  &mkp MCLK   &trans  &trans           
+         >;
+       };
 
       Mouse_layer1 {
       display-name = "Mouse";
       bindings = <
-//|------------|-------------|-----------|-----------|---------------|---------------|   |---------------|-------------|-----------|-------------|---------------|------------|
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &mo SCROLL_TP   &trans
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans       &trans        &trans      &trans      &trans          &trans              &trans          &trans        &trans      &trans        &trans          &trans
-   &mkp MCLK    &trans                                &trans          &trans              &mkp LCLK       &mkp RCLK                               &trans          &mkp MCLK
+//|------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &mo SCROLL_TP &trans          &trans
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &mkp MCLK    &trans                                &trans          &trans          &trans               &mkp MCLK      &mkp LCLK       &mkp RCLK                               &trans          &mkp MCLK
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &none      &none   &mkp MCLK   &trans  &none 
                                                 &none      &none   &mkp MCLK   &trans  &none 
       >;
     };
+
+     Scroll_layer {
+      display-name = "Scroll";
+      bindings = <
+//|------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &none         &mo MOUSE       &trans
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &mkp MCLK    &trans                                &trans          &trans          &trans               &mkp MCLK      &mkp LCLK       &mkp RCLK                               &trans          &mkp MCLK 
+                                        // DPAD Left,      Down,   Middle,     Up,     Right
+                                                &trans     &trans  &mkp MCLK   &trans  &trans  
+                                                &trans     &trans  &mkp MCLK   &trans  &trans           
+      >;
+    };
+
+
+
 
 
 #ifdef HAS_MOUSE_KEYS
