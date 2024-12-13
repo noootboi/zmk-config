@@ -61,7 +61,7 @@
 // data  gp22 -> 15
 
 // But on the yk_do52pro keyboard the trackpoint is connected to 16 and 15 
-// in my I swapped clock and data to be compatible with rp2040 pio
+// in my I swapped clock and data to be compatible with rp2040 pioj
 #define MOUSE_PS2_PIN_SCL_PRO_MICRO <&pro_micro 16 GPIO_ACTIVE_HIGH>
 #define MOUSE_PS2_PIN_SDA_PRO_MICRO <&pro_micro 15 GPIO_ACTIVE_HIGH>
 
@@ -88,7 +88,7 @@
 // pins, in the blue or violet boxes, with a format like `PX.YY` (P0.09).
 //
 // Enter it like `X, Y` without leading zeroes.
-//
+//h
 // Examples:
 //      D1  - P0.06: 0, 6
 // 		D0  - P0.08: 0, 8
@@ -512,8 +512,8 @@
             ;
         scroller {
             layers = <9>;
-            process-next;
-            input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,<&zip_xy_scaler 1 8>,<&zip_xy_to_scroll_mapper>;
+            //process-next;
+            input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,<&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,<&zip_xy_scaler 1 8>,<&zip_xy_to_scroll_mapper>;
         };
     };
 
