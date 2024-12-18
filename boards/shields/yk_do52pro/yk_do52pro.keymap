@@ -125,10 +125,10 @@
    &kp LBKT          &kp Q         &hml RALT W &kp E        &kp R           &kp T                                               &kp Y           &kp U         &kp I        &tl SCROLL_TP O &tl MOUSE P      &kp EQUAL
    &kp RBKT          &hml LMETA A  &hml LALT S &hml LCTRL D &hml LSHIFT F   &kp G                                               &kp H           &hml LSHIFT J &hmr LCTRL K &hmr LALT L     &hmr LMETA SEMI &kp SQT
    &kp LSHFT         &kp Z         &hml RALT X &kp C        &kp V           &kp B                                               &kp N           &kp M         &kp COMMA    &hmr RALT DOT   &kp FSLH        &kp BSLH
-   &tl FUNCTION TAB  &kp LCTRL                              &tl SYMBOL ESC  &tl NUMBER SPACE &tl FUNCTION TAB    &tl CONFIG RET &tl NAVIG BSPC  &tl MEDIA DEL                              &kp LALT        &tl CONFIG RET
-                                             // DPAD  Left,     Down,     Middle,            Up,      Right
-                                                      &kp LEFT  &kp DOWN  &tl FUNCTION TAB   &kp UP   &kp RIGHT
-                                                      &kp LEFT  &kp DOWN  &tl CONFIG RET     &kp UP   &kp RIGHT
+   &kp LCTRL         &kp LMETA                              &tl SYMBOL ESC  &tl NUMBER SPACE &tl FUNCTION TAB    &tl CONFIG RET &tl NAVIG BSPC  &tl MEDIA DEL                              &kp LALT        &kp C_MENU
+                                             // DPAD  Left,     Down,      Middle,     Up,        Right
+                                                      &kp LEFT  &kp DOWN   &kp PSCRN   &kp UP     &kp RIGHT
+                                                      &kp HOME  &kp PG_DN  &kp INS     &kp PG_UP  &kp END
       >;
     };
 
@@ -185,7 +185,7 @@
 //|--------------|-------------|-------------|-------------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
    &studio_unlock &trans        &trans        &trans        &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
    &trans         &kp C_BRI_DEC &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_INC   &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans         &trans        &trans        &trans        &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans         &kp C_BRI_DEC &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_INC   &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
    &trans         &trans        &trans        &trans        &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
    &trans         &trans                                    &trans          &trans          &trans              &trans          &trans          &trans                                  &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
@@ -235,7 +235,7 @@
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &tl SCROLL_TP O &tl MOUSE P     &trans
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans          &trans          &trans
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans          &trans          &trans
-   &mkp MCLK    &trans                                &trans          &trans          &trans               &mkp MCLK      &mkp LCLK       &mkp RCLK                                 &trans          &mkp MCLK 
+   &mkp MCLK    &trans                                &trans          &trans          &trans               &trans         &trans          &trans                                 &trans          &mkp MCLK 
                                            // DPAD Left,      Down,   Middle,     Up,     Right
                                                    &trans     &trans  &mkp MCLK   &trans  &trans  
                                                    &trans     &trans  &mkp MCLK   &trans  &trans           
