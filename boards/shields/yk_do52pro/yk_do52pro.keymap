@@ -138,7 +138,7 @@
          bindings = <
 //|------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans       &kp HOME      &kp PG_UP   &kp PG_DN   &kp END         &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans       &kp HOME      &kp PG_UP   &kp PG_DN   &kp END         &trans                                              &trans          &kp RA(GRAVE) &kp RA(SQT) &trans        &trans          &trans
    &trans       &kp LEFT      &kp DOWN    &kp UP      &kp RIGHT       &caps_word                                          &trans          &kp LSHIFT    &kp LCTRL   &kp LALT      &kp LMETA       &trans
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &kp RALT      &trans          &trans
    &trans       &trans                                &caps_word      &kp LBKT        &kp RBKT            &trans          &trans          &trans                                  &trans          &trans 
