@@ -187,7 +187,7 @@
    &trans         &kp C_BRI_DEC &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_INC   &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
    &trans         &kp C_BRI_DEC &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_INC   &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
    &trans         &trans        &trans        &trans        &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans         &trans                                    &trans          &kp LBRC        &kp RBRC             &trans          &trans          &trans                                  &trans          &trans 
+   &trans         &trans                                    &trans          &kp LBRC        &kp RBRC             &trans         &trans          &trans                                  &trans          &trans
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
                                                 &trans     &trans  &trans      &trans  &trans 
@@ -203,7 +203,7 @@
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &kp F7        &kp F8      &kp F9        &kp F10         &trans
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &kp F4        &kp F5      &kp F6        &kp F11         &trans
-   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &kp F1        &kp F2      &kp F3        &kp F12         &trans
+   &bootloader  &trans        &trans      &trans      &trans          &trans                                              &trans          &kp F1        &kp F2      &kp F3        &kp F12         &trans
    &trans       &trans                                &trans          &trans          &trans              &trans          &trans          &trans                                  &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans 
@@ -235,10 +235,10 @@
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &tl SCROLL_TP O &tl MOUSE P     &trans
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans          &trans          &trans
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans          &trans          &trans
-   &mkp MCLK    &trans                                &trans          &trans          &trans               &trans         &trans          &trans                                 &trans          &mkp MCLK 
+   &trans       &trans                                &trans          &trans          &trans               &mkp LCLK      &mkp MCLK       &mkp RCLK                                 &trans          &trans 
                                            // DPAD Left,      Down,   Middle,     Up,     Right
-                                                   &trans     &trans  &mkp MCLK   &trans  &trans  
-                                                   &trans     &trans  &mkp MCLK   &trans  &trans           
+                                                   &trans     &trans  &trans      &trans  &trans
+                                                   &trans     &trans  &trans      &trans  &trans
          >;
        };
 
@@ -250,10 +250,10 @@
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &mo SCROLL_TP &trans          &trans
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &mo SCROLL_TP &trans          &trans
-   &mkp MCLK    &trans                                &trans          &trans          &trans               &mkp MCLK      &mkp LCLK       &mkp RCLK                               &trans          &mkp MCLK
+   &trans       &trans                                &trans          &trans          &trans               &mkp LCLK      &mkp MCLK       &mkp RCLK                               &trans          &trans
                                         // DPAD Left,      Down,   Middle,     Up,     Right
-                                                &none      &none   &mkp MCLK   &trans  &none 
-                                                &none      &none   &mkp MCLK   &trans  &none 
+                                                &none      &none   &trans      &trans  &none 
+                                                &none      &none   &trans      &trans  &none 
       >;
     };
 
@@ -265,10 +265,10 @@
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &none         &mo MOUSE       &trans
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
-   &mkp MCLK    &trans                                &trans          &trans          &trans               &mkp MCLK      &mkp LCLK       &mkp RCLK                               &trans          &mkp MCLK 
+   &trans       &trans                                &trans          &trans          &trans               &mkp LCLK      &mkp MCLK       &mkp RCLK                               &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
-                                                &trans     &trans  &mkp MCLK   &trans  &trans  
-                                                &trans     &trans  &mkp MCLK   &trans  &trans           
+                                                &trans     &trans  &trans      &trans  &trans  
+                                                &trans     &trans  &trans      &trans  &trans           
       >;
     };
 
