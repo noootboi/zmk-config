@@ -242,8 +242,8 @@
          >;
        };
 
-      Mouse_layer1 {
-      display-name = "Mouse";
+      Mouse_layerAuto {
+      display-name = "Mouse_Auto";
       bindings = <
 //|------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
    &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
