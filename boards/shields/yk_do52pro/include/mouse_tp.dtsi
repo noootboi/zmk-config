@@ -45,7 +45,7 @@
   //
   // Not all trackpoints support it and you have to enable
   // `tp-press-to-select;` in `&mouse_ps2` first.
-  #define U_MSS_TP_PT_I &mms MS_TP_PTS_THRESHOLD_INCR
+  #define U_MSS_TP_PT_I &mms MS_TP_PTS_TH\ESHOLD_INCR
   #define U_MSS_TP_PT_D &mms MS_TP_PTS_THRESHOLD_DECR
 
 
@@ -77,7 +77,7 @@
     &mouse_ps2 {
 
       // How sensitive the TP is (Default: 128)
-      //tp-sensitivity = <96>;
+      tp-sensitivity = <254>;
 
       // The maximum mouse movement speed the TP will accelarate to
       // (Default: 97)

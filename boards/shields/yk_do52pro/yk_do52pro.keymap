@@ -260,12 +260,12 @@
      Scroll_layer {
       display-name = "Scroll";
       bindings = <
-//|------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
-   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &none         &mo MOUSE       &trans
-   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
-   &trans       &trans                                &trans          &trans          &trans               &mkp LCLK      &mkp MCLK       &mkp RCLK                               &trans          &trans 
+//|-------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
+   &trans        &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   U_MSS_TP_S_I  &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &none         &mo MOUSE       &trans
+   U_MSS_TP_S_D  &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans        &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans        &trans                                &trans          &trans          &trans               &mkp LCLK      &mkp MCLK       &mkp RCLK                               &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
                                                 &trans     &trans  &trans      &trans  &trans           
