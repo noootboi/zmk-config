@@ -222,6 +222,8 @@
     interrupts = < 6 0 >;
 };
 
+
+/*
 // All other priorities should be two levels lower than their defaults
 // (which is usually 1 and should be demoted to 3)
 &clock {
@@ -395,7 +397,7 @@
 &cryptocell {
     interrupts = < 42 3 >;
 };
-
+*/
 // This define can be used in the keymap file to check whether the device tree
 // configs in this file are present to void build errors on the side that does
 // not have the mouse or TP
@@ -476,7 +478,7 @@
 / {
     mouse_ps2: mouse_ps2 {
         compatible = "zmk,input-mouse-ps2";
-
+        
 #ifdef MOUSE_PS2_DRIVER_UART
 	    ps2-device = <&uart_ps2>;
 #else
@@ -491,19 +493,25 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-/ {
+
+/{
     trackpoint_listener: trackpoint_listener {
         compatible = "zmk,input-listener";
         device = <&mouse_ps2>;
-        input-processors = 
-            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>
-          , <&zip_temp_layer 7 500>
-            ;
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,<&zip_xy_scaler 0 1>;
         scroller {
-            layers = <9>;
+            layers = <10>;
             //process-next;
-            input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,<&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,<&zip_xy_scaler 1 16>,<&zip_xy_to_scroll_mapper>;
+            input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,<&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,<&zip_xy_scaler 1 8>,<&zip_xy_to_scroll_mapper>;
         };
+        mouse {
+            layers = <9>;
+            input-processors = 
+                <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>
+                //, <&zip_temp_layer 9 500>
+                ;
+        };
+        
     };
 
     
