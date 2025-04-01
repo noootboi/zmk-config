@@ -223,7 +223,7 @@
 };
 
 
-/*
+
 // All other priorities should be two levels lower than their defaults
 // (which is usually 1 and should be demoted to 3)
 &clock {
@@ -397,7 +397,7 @@
 &cryptocell {
     interrupts = < 42 3 >;
 };
-*/
+
 // This define can be used in the keymap file to check whether the device tree
 // configs in this file are present to void build errors on the side that does
 // not have the mouse or TP

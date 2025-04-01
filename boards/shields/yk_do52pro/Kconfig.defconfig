@@ -10,7 +10,8 @@
 # pointing device is connected to.
 
 if SHIELD_YK_DO52PRO_RIGHT
-
+config NANOPB
+    default n
 config ZMK_KEYBOARD_NAME
     default "YK DO52Pro"
 
