@@ -83,9 +83,7 @@ RC(4,0) RC(4,1)                 RC(4,4) RC(4,5)                 RC(4,6) RC(4,7) 
             , <&key_physical_attrs 100 100  100  475       0     0     0>
             , <&key_physical_attrs 100 100  400  450       0     0     0>
             , <&key_physical_attrs 100 100  500  475       0     0     0>
-
             //
-
             , <&key_physical_attrs 100 100 1000  475       0     0     0>
             , <&key_physical_attrs 100 100 1100  450       0     0     0>
             , <&key_physical_attrs 100 100 1400  475       0     0     0>
