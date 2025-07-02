@@ -71,12 +71,15 @@
 #define LH1 58
 #define LH2 57
 #define LH3 56
+#define LH4 61
 
 #define RH0 62  // right thumb keys
 #define RH1 63
 #define RH2 64
 #define RH3 65
+#define RH4 60
 
+/*
 #define LJ0 30  // left joystick keys
 #define LJ1 44
 #define LJ2 45
@@ -88,3 +91,4 @@
 #define RJ2 48
 #define RJ3 49
 #define RJ4 61
+*/
