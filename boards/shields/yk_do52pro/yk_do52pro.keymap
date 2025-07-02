@@ -31,8 +31,8 @@
 #define BASE      0
 #define GAME      1
 #define GAME_M    2
-//#define NAVIG     3
-//#define NUMBER    4
+#define NAVIG     3
+#define NUMBER    4
 #define SYMBOL    5
 #define MEDIA     6
 #define FUNCTION  7
@@ -54,7 +54,7 @@
 // key-position labels
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left-hand keys
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right-hand keys
-#define THUMBS LH4 LH3 LH2 LH1 LH0 RH0 RH1 RH2 RH3 RH4                      // thumb keys
+#define THUMBS     LH3 LH2 LH1 LH0 RH0 RH1 RH2 RH3                          // thumb keys
 
 
 // Adjust layer keys based on enabled features.
@@ -122,9 +122,10 @@
   keymap {
     compatible = "zmk,keymap";
    
-    Base_layer {
+    Base_layer {  
       display-name = "Base";
       bindings = <
+    }      
 //|-----------------|-------------|-----------|------------|-----------------|----------------|---------------|   |---------------|---------------|-------------|------------|---------------|---------------|-------------|
    &kp GRAVE         &kp N1        &kp N2      &kp N3       &kp N4            &kp N5                                               &kp N6          &kp N7        &kp N8       &kp N9          &kp N0          &kp MINUS
    &kp LBKT          &kp Q         &hml RALT W &kp E        &kp R             &kp T                                                &kp Y           &kp U         &kp I        &tl SCROLL_TP O &tl MOUSE P     &tl SCROLL_TP EQUAL
@@ -166,6 +167,36 @@
                                                       &kp HOME  &kp PG_DN  &kp INS     &kp PG_UP  &kp END
       >;
     };
+
+
+  //3
+    Nav_layer {
+      display-name = "Nav";
+         bindings = <
+//|------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
+   &trans       &kp HOME      &kp PG_UP   &kp PG_DN   &kp END         &trans                                              &trans          &kp RA(GRAVE) &kp RA(SQT) &trans        &trans          &trans
+   &trans       &kp LEFT      &kp UP      &kp DOWN    &kp RIGHT       &caps_word                                          &trans          &kp LSHIFT    &kp LCTRL   &kp LALT      &kp LMETA       &trans
+   &trans       &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &kp RALT      &trans          &trans
+   &trans       &trans                                &caps_word      &kp LBKT        &kp RBKT            &trans          &trans          &trans                                  &trans          &trans 
+                                        // DPAD Left,      Down,   Middle,     Up,     Right
+                                                &trans     &trans  &trans      &trans  &trans  
+                                                &trans     &trans  &trans      &trans  &trans 
+      >;
+    };
+//4
+    Num_layer {
+      display-name = "Number";
+        bindings = <
+//|------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-------------|-------------|---------------|------------|
+   &kp F12      &kp F1        &kp F2      &kp F3      &kp F4          &kp F5                                              &kp F6          &kp F7        &kp F8        &kp F9        &kp F10         &kp F11         
+   &trans       &kp LBRC      &kp LBKT    &kp RBKT    &kp RBRC        &trans                                              &kp GRAVE       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL       &kp F12
+   &trans       &kp LMETA     &kp LALT    &kp LCTRL   &kp LSHIFT      &trans                                              &kp EQUAL       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT         &trans
+   &trans       &trans        &kp RALT    &trans      &trans          &trans                                              &kp MINUS       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BSLH        &trans
+   &trans       &trans                                &trans          &trans          &trans               &kp AT         &kp NUMBER_0    &kp MINUS                                 &trans          &trans 
+                                        // DPAD Left,      Down,   Middle,     Up,     Right
+                                                &trans     &trans  &trans      &trans  &trans  
+                                                &trans     &trans  &trans      &trans  &trans 
 
   //5
     Symb_layer {
