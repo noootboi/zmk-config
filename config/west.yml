@@ -1,7 +1,4 @@
 manifest:
-  defaults:
-    remote: urob
-    revision: v0.2 # Pin everything to v0.2
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -25,6 +22,7 @@ manifest:
     # Not compatible with the PS/2 mouse & TP driver module.
     - name: zmk
       remote: zmkfirmware
+      revision: main
       import: app/west.yml
 
     # infused-kim's zmk fork with mouse PR, which might be a bit outdated, but
@@ -66,32 +64,11 @@ manifest:
       remote: badjeff
       revision: main
 
-    # ZMK modules
-    - name: zmk-adaptive-key
-      path: modules/zmk/adaptive-key
-    - name: zmk-auto-layer
-      path: modules/zmk/auto-layer
     - name: zmk-helpers
-      path: modules/zmk/helpers
-    - name: zmk-leader-key
-      path: modules/zmk/leader-key
-    - name: zmk-tri-state
-      path: modules/zmk/tri-state
+      remote: urob
+      revision: main
 
-    # Temporarily overload Zephyr until
-    # https://github.com/zmkfirmware/zephyr/pull/40 is merged.
-    - name: zephyr
-      revision: v3.5.0+zmk-fixes
-      clone-depth: 1
-      import:
-        # Only enable most commonly used boards. For less common hardware one
-        # may need to enable additional modules.
-        name-allowlist:
-          - cmsis
-          - hal_nordic
-          - hal_rpi_pico
-          - hal_stm32
-          - lvgl
-          - tinycrypt
+    
+
   self:
     path: config
