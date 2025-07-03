@@ -18,8 +18,8 @@
 
 
 // ZMK Includes
-#include "zmk-helpers/unicode-chars/greek.dtsi"
-#include "zmk-helpers/unicode-chars/german.dtsi"
+//#include "zmk-helpers/unicode-chars/greek.dtsi"
+//#include "zmk-helpers/unicode-chars/german.dtsi"
 
 
 /*
