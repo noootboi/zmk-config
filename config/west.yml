@@ -68,6 +68,10 @@ manifest:
       remote: urob
       revision: v0.2
 
+    - name: zmk-adaptive-key
+      remote: urob
+      revision: v0.2 # set to same as ZMK version above
+
     
 
   self:
