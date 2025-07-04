@@ -131,8 +131,8 @@
                 bindings = <&key_repeat>;
                 max-prior-idle-ms = <350>;
                 strict-modifiers;
-            };        
-
+            };
+        };
 
 
   };
