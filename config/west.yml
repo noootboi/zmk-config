@@ -72,6 +72,14 @@ manifest:
       remote: urob
       revision: v0.2 # set to same as ZMK version above
 
+          # ZMK modules
+    - name: zmk-auto-layer
+      path: modules/zmk/auto-layer
+    - name: zmk-leader-key
+      path: modules/zmk/leader-key
+    - name: zmk-tri-state
+      path: modules/zmk/tri-state
+
     
 
   self:

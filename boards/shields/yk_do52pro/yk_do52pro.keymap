@@ -79,6 +79,8 @@
 #define QUICK_TAP_MS 250
 
 
+/* Homerow mods */
+
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS)                                 \
   ZMK_HOLD_TAP(NAME, bindings = <HOLD>, <TAP>; flavor = "balanced";            \
                tapping-term-ms = <280>; quick-tap-ms = <QUICK_TAP_MS>;         \
@@ -95,7 +97,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
 /* Combos, leader key sequences, mouse emulation */
 
-#include "combos.dtsi" // Must be sourced after HRM-combo hack.
+//#include "combos.dtsi" // Must be sourced after HRM-combo hack.
 
 
 // Disable line-wrap in your editor to see a "visualization" of the key layouts
