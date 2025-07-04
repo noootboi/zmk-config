@@ -79,14 +79,7 @@
 #define QUICK_TAP_MS 250
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <&LT0 &LT1>;>;
-            bindings = <&kp ESC>;
-        };
-    };
+
 };
 
 
@@ -136,8 +129,18 @@
   };
 
 
+  
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <&LT0 &LT1>;>;
+            bindings = <&kp ESC>;
+        };
+    };
 
 
+/ }
 
   
   //0
