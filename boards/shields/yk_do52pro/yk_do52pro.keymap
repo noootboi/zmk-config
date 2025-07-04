@@ -78,10 +78,6 @@
 
 #define QUICK_TAP_MS 250
 
-/ {
-
-};
-
 
 // Disable line-wrap in your editor to see a "visualization" of the key layouts
 / {
@@ -129,7 +125,7 @@
   };
 
 
-  
+
     combos {
         compatible = "zmk,combos";
         combo_esc {
