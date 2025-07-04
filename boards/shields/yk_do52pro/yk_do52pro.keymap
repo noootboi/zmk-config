@@ -85,7 +85,15 @@
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
 
-ZMK_COMBO(cut,   &kp LC(X),    LB3 LB1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <`LT3 LT2>;
+            bindings = <&kp ESC>;
+        };
+    };
 
 
 // Disable line-wrap in your editor to see a "visualization" of the key layouts
@@ -142,8 +150,6 @@ ZMK_COMBO(cut,   &kp LC(X),    LB3 LB1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_
             bindings = <&kp ESC>;
         };
     };
-};
-
 */
 
   
