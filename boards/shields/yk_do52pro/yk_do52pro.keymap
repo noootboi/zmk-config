@@ -42,6 +42,19 @@
 #define MOUSE     9
 #define SCROLL_TP 10
 
+
+
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <`LT3 LT2>;
+            bindings = <&kp ESC>;
+        };
+    };
+
+
+
 #ifdef HAS_MOUSE_KEYS
   #include <dt-bindings/zmk/mouse.h>
   #include <behaviors/mouse_keys.dtsi>
