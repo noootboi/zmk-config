@@ -263,7 +263,7 @@
       display-name = "Configuration";
       bindings = <
 //|---------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-------------|-------------|---------------|------------|
-   &studio_unlock  &trans        &trans      &trans      &trans          &trans                                              &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 5
+   &studio_unlock  &trans        &trans      &trans      &trans          &trans                                              &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans
    &trans          &trans        &trans      &trans      &trans          &trans                                              &bt BT_CLR      &bt BT_PRV    &out OUT_USB  &out OUT_BLE  &bt BT_NXT      &trans
    &sys_reset      &trans        &trans      &trans      &trans          &trans                                              &bt BT_CLR_ALL  &out OUT_TOG  &trans        &trans        &trans          &sys_reset
    &bootloader     &trans        &trans      &trans      &trans          &trans                                              &bt BT_DISC 0   &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4   &bootloader
