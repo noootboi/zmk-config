@@ -42,27 +42,6 @@
 #define MOUSE     9
 #define SCROLL_TP 10
 
-#define QUICK_TAP_MS 250
-
-
-#define COMBO_TERM_FAST 18
-#define COMBO_TERM_SLOW 30
-
-#define COMBO_IDLE_FAST 150
-#define COMBO_IDLE_SLOW 50
-
-
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <`LT3 LT2>;
-            bindings = <&kp ESC>;
-        };
-    };
-
-
-
 #ifdef HAS_MOUSE_KEYS
   #include <dt-bindings/zmk/mouse.h>
   #include <behaviors/mouse_keys.dtsi>
@@ -97,8 +76,10 @@
 #endif  // HAS_MOUSE_TP
 
 
+#define QUICK_TAP_MS 250
 
 
+#include "includes/combos.dtsi"
 
 
 // Disable line-wrap in your editor to see a "visualization" of the key layouts
@@ -143,19 +124,12 @@
         };       
 
 
-        //#include "include/combos.dtsi" 
+        
   };
-/*
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <`LT3 LT2>;
-            bindings = <&kp ESC>;
-        };
-    };
-*/
+
+
+
+
 
   
   //0
