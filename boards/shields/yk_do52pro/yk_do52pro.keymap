@@ -123,7 +123,7 @@
 
         //#include "include/combos.dtsi" 
   };
-
+/*
 / {
     combos {
         compatible = "zmk,combos";
@@ -135,7 +135,7 @@
     };
 };
 
-
+*/
 
   
   //0
