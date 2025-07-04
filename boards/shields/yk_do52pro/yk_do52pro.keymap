@@ -121,10 +121,19 @@
         };       
 
 
-        #include "include/combos.dtsi" 
+        //#include "include/combos.dtsi" 
   };
 
-
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <`LT3 LT2>;
+            bindings = <&kp ESC>;
+        };
+    };
+};
 
 
 
