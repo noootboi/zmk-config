@@ -121,7 +121,7 @@
         };       
 
 
-        shift-repeat: shift-repeat {
+        reshift: shift_repeat {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&sk LSHFT>;
