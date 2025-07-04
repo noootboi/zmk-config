@@ -119,9 +119,12 @@
             bindings = <&mo>, <&kp>;
             hold-trigger-on-release;             // delay positional check until key-release
         };       
+
+
+        #include "include/combos.dtsi" 
   };
 
-#include "include/combos.dtsi" 
+
 
 
 
