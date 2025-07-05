@@ -155,7 +155,7 @@
 //|-----------------|------------------|----------------|----------------|-----------------|----------------|                   |----------------|----------------|----------------|----------------|----------------|----------------|
   &kp ESCAPE         &kp N1             &kp N2           &kp N3           &kp N4            &kp N5                               &kp N6           &kp N7           &kp N8           &kp N9           &kp N0           &kp DELETE
   &kp TAB            &kp B              &kp Y            &kp O            &kp U             &kp SEMI                             &kp X            &kp L            &kp D            &kp P            &kp F            &kp BSPC 
-  &kp CAPSLOCK       &hml LGUI C        &hml LALT I      &hml LSHIFT E    &hml LCTRL A      &kp COMMA    '                       &kp K            &hmr LCTRL H     &hmr RSHIFT T    &hmr LALT N      &hmr LGUI S       &kp ENTER
+  &kp CAPSLOCK       &hml LGUI C        &hml LALT I      &hml LSHIFT E    &hml LCTRL A      &kp COMMA                            &kp K            &hmr LCTRL H     &hmr RSHIFT T    &hmr LALT N      &hmr LGUI S      &kp ENTER
   &kp LSHFT          &kp FSLH           &kp EQUAL        &kp SQT          &kp DOT           &kp MINUS                            &kp J            &kp M            &kp G            &kp W            &kp V            &kp RSHFT
   &kp LCTRL          &kp LEFT_ALT                                         &kp R             &kp SPACE                            &kp BSPC         &kp LSHFT                                          &kp RIGHT_ALT    &kp RCTRL
 
