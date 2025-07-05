@@ -232,7 +232,7 @@
 //|--------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
    &studio_unlock &kp F1        &kp F2      &kp F3      &kp F4          &kp F5                                              &kp F6          &kp F7        &kp F8        &kp F9        &kp F10         &kp F11
    &trans         &trans        &kp RALT    &trans      &trans          &trans                                              &kp TILDE       &kp AMPERSAND &kp STAR      &kp LPAR      &kp PLUS        &kp F12
-   &tog GAME_M    &kp LMETA     &kp LALT    &kp LCTRL   &kp LSHIFT      &trans                                              &kp LBRC        &kp DOLLAR    &kp PERCENT   &kp CARET     &kp DQT         &trans
+   &tog QWERTY    &kp LMETA     &kp LALT    &kp LCTRL   &kp LSHIFT      &trans                                              &kp LBRC        &kp DOLLAR    &kp PERCENT   &kp CARET     &kp DQT         &trans
    &tog GAME      &trans        &kp RALT    &trans      &trans          &trans                                              &kp RBRC        &kp EXCL      &kp AT        &kp HASH      &kp PIPE        &trans
    &to BASE       &trans                                &trans          &trans                                              &kp RPAR        &kp UNDER                                 &trans          &trans 
                                           // DPAD Left,      Down,   Middle,     Up,     Right
@@ -247,7 +247,7 @@
 //|--------------|-------------|-------------|-------------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
    &studio_unlock &trans        &trans        &trans        &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
    &trans         &kp C_BRI_DEC &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_INC   &trans                                              &kp KMLT        &kp KP_N7     &kp KP_N8   &kp KP_N9     &kp KMIN        &trans
-   &tog GAME_M    &kp C_BRI_DEC &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_INC   &trans                                              &kp KDIV        &kp KP_N4     &kp KP_N5   &kp KP_N6     &kp KPLS        &trans
+   &tog QWERTY    &kp C_BRI_DEC &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_INC   &trans                                              &kp KDIV        &kp KP_N4     &kp KP_N5   &kp KP_N6     &kp KPLS        &trans
    &tog GAME      &trans        &trans        &trans        &trans          &trans                                              &kp KP_N0       &kp KP_N1     &kp KP_N2   &kp KP_N3     &kp KP_DOT      &trans
    &to BASE       &trans                                    &kp HASH        &kp LBRC                                            &trans          &trans                                  &trans          &trans
                                         // DPAD Left,      Down,   Middle,     Up,     Right
