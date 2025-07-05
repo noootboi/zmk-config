@@ -32,7 +32,7 @@
 
 #define BASE      0
 #define GAME      1
-#define GAME_M    2
+#define QWERTY    2
 #define NAVIG     3
 #define NUMBER    4
 #define SYMBOL    5
@@ -152,12 +152,13 @@
     Base_layer {
       display-name = "Base";
       bindings = <
-//|-----------------|-------------|-----------|------------|-----------------|----------------|---------------|   |---------------|---------------|-------------|------------|---------------|---------------|-------------|
-   &kp GRAVE         &kp N1        &kp N2      &kp N3       &kp N4            &kp N5                                               &kp N6          &kp N7        &kp N8       &kp N9          &kp N0          &kp MINUS
-   &kp LBKT          &kp Q         &hml RALT W &kp E        &kp R             &kp T                                                &kp Y           &kp U         &kp I        &tl SCROLL_TP O &tl MOUSE P     &tl SCROLL_TP EQUAL
-   &kp RBKT          &hml LMETA A  &hml LALT S &hml LCTRL D &hml LSHIFT F     &kp G                                                &kp H           &hml LSHIFT J &hmr LCTRL K &hmr LALT L     &hmr LMETA SEMI &tl SCROLL_TP SQT
-   &kp LSHFT         &kp Z         &hml RALT X &kp C        &kp V             &kp B                                                &kp N           &kp M         &kp COMMA    &hmr RALT DOT   &tl MOUSE FSLH  &tl SCROLL_TP BSLH
-   &kp LCTRL         &kp LMETA                              &tl FUNCTION ESC  &tl NAVIG TAB                                        &tl MEDIA DEL   &tl CONFIG RET                             &kp LALT        &kp RALT
+//|-----------------|------------------|----------------|----------------|-----------------|----------------|                   |----------------|----------------|----------------|----------------|----------------|----------------|
+  &kp ESCAPE         &kp N1             &kp N2           &kp N3           &kp N4            &kp N5                               &kp N6           &kp N7           &kp N8           &kp N9           &kp N0           &kp DELETE
+  &kp TAB            &kp B              &kp Y            &kp O            &kp U             &kp SEMI                             &kp X            &kp L            &kp D            &kp P            &kp F            &kp BSPC 
+  &kp CAPSLOCK       &hml LGUI C        &hml LALT I      &hml LSHIFT E    &hml LCTRL A      &kp COMMA    '                       &kp K            &hmr LCTRL H     &hmr RSHIFT T    &hmr LALT N      &hmr LGUI S       &kp ENTER
+  &kp LSHFT          &kp FSLH           &kp EQUAL        &kp SQT          &kp DOT           &kp MINUS                            &kp J            &kp M            &kp G            &kp W            &kp V            &kp RSHFT
+  &kp LCTRL          &kp LEFT_ALT                                         &kp R             &kp SPACE                            &kp BSPC         &kp LSHFT                                          &kp RIGHT_ALT    &kp RCTRL
+
                                              // DPAD  Left,     Down,      Middle,     Up,        Right
                                                       &kp LEFT  &kp DOWN   &kp PSCRN   &kp UP     &kp RIGHT
                                                       &kp HOME  &kp PG_DN  &kp INS     &kp PG_UP  &kp END
@@ -179,17 +180,17 @@
       >;
     };
 //2
-      GameMouse_layer {
-      display-name = "Game Mouse";
+      Qwerty_layer {
+      display-name = "Qwerty";
       bindings = <
 //|-----------------|-------------|-----------|------------|-----------------|----------------|--------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
-   &kp GRAVE         &kp N1        &kp N2      &kp N3       &kp N4            &kp N5                                              &kp N6          &kp N7        &kp N8       &kp N9          &kp N0          &kp MINUS
-   &kp LBKT          &kp Q         &kp W       &kp E        &kp R             &kp T                                               &kp Y           &kp U         &kp I        &kp O           &kp P           &kp EQUAL
-   &kp RBKT          &kp A         &kp S       &kp D        &kp F             &kp G                                               &kp H           &kp J         &kp K        &kp L           &kp SEMI        &kp SQT
-   &kp LSHFT         &kp Z         &kp X       &kp C        &kp V             &kp B                                               &kp N           &kp M         &kp COMMA    &kp DOT         &kp FSLH        &kp BSLH
-   &kp LCTRL         &kp DEL                                &kp ESC           &tl SYMBOL TAB                                      &mkp MCLK       &mkp RCLK                                  &kp LALT        &kp RET
-                                             // DPAD  Left,     Down,      Middle,     Up,       ,Right
-                                                      &kp LEFT  &kp DOWN   &kp BSPC    &kp UP     &kp RIGHT
+   &kp GRAVE         &kp N1        &kp N2      &kp N3       &kp N4            &kp N5                                               &kp N6          &kp N7        &kp N8       &kp N9          &kp N0          &kp MINUS
+   &kp LBKT          &kp Q         &hml RALT W &kp E        &kp R             &kp T                                                &kp Y           &kp U         &kp I        &tl SCROLL_TP O &tl MOUSE P     &tl SCROLL_TP EQUAL
+   &kp RBKT          &hml LMETA A  &hml LALT S &hml LCTRL D &hml LSHIFT F     &kp G                                                &kp H           &hml LSHIFT J &hmr LCTRL K &hmr LALT L     &hmr LMETA SEMI &tl SCROLL_TP SQT
+   &kp LSHFT         &kp Z         &hml RALT X &kp C        &kp V             &kp B                                                &kp N           &kp M         &kp COMMA    &hmr RALT DOT   &tl MOUSE FSLH  &tl SCROLL_TP BSLH
+   &kp LCTRL         &kp LMETA                              &tl FUNCTION ESC  &tl NAVIG TAB                                        &tl MEDIA DEL   &reshift                             &kp LALT        &kp RALT
+                                             // DPAD  Left,     Down,      Middle,     Up,        Right
+                                                      &kp LEFT  &kp DOWN   &kp PSCRN   &kp UP     &kp RIGHT
                                                       &kp HOME  &kp PG_DN  &kp INS     &kp PG_UP  &kp END
       >;
     };
