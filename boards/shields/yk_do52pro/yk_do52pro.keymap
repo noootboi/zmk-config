@@ -84,7 +84,10 @@
 
   
   behaviors {
+
+    
        /* left-hand HRMs */
+       /*
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -98,6 +101,7 @@
         };
 
         /* right-hand HRMs */
+        /*
         hmr: homerow_mods_right {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -109,6 +113,7 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;             // delay positional check until key-release
         };
+        */
         tl: thumb_layer {
             compatible = "zmk,behavior-hold-tap";
              flavor = "balanced";
@@ -119,7 +124,7 @@
             bindings = <&mo>, <&kp>;
             hold-trigger-on-release;             // delay positional check until key-release
         };       
-
+      
 
         reshift: shift_repeat {
             compatible = "zmk,behavior-adaptive-key";
@@ -140,6 +145,20 @@
 
 
   #include "includes/combos.dtsi"
+
+#define ZMK_COMBO_8(NAME, TAP, POS, LAYERS, COMBO_MS, IDLE_MS, HOLD, SIDE)     \
+  MAKE_HRM(hm_combo_##NAME, &kp, TAP, SIDE THUMBS)                             \
+  ZMK_COMBO_6(NAME, &hm_combo_##NAME HOLD 0, POS, LAYERS, COMBO_MS, IDLE_MS)
+
+
+  #define COMBO_TERM_FAST 18
+#define COMBO_TERM_SLOW 30
+
+#define COMBO_IDLE_FAST 150
+#define COMBO_IDLE_SLOW 50
+
+/* Horizontal combos - left hand */
+ZMK_COMBO(esc,   &kp ESC,      LT3 LT2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 
 
@@ -188,7 +207,7 @@
    &kp LBKT          &kp Q         &hml RALT W &kp E        &kp R             &kp T                                                &kp Y           &kp U         &kp I        &tl SCROLL_TP O &tl MOUSE P     &tl SCROLL_TP EQUAL
    &kp RBKT          &hml LMETA A  &hml LALT S &hml LCTRL D &hml LSHIFT F     &kp G                                                &kp H           &hml LSHIFT J &hmr LCTRL K &hmr LALT L     &hmr LMETA SEMI &tl SCROLL_TP SQT
    &kp LSHFT         &kp Z         &hml RALT X &kp C        &kp V             &kp B                                                &kp N           &kp M         &kp COMMA    &hmr RALT DOT   &tl MOUSE FSLH  &tl SCROLL_TP BSLH
-   &kp LCTRL         &kp LMETA                              &tl FUNCTION ESC  &tl NAVIG TAB                                        &tl MEDIA DEL   &reshift                             &kp LALT        &kp RALT
+   &kp LCTRL         &kp LMETA                              &kp ESC           &kp TAB                                              &kp DEL   &reshift                             &kp LALT        &kp RALT
                                              // DPAD  Left,     Down,      Middle,     Up,        Right
                                                       &kp LEFT  &kp DOWN   &kp PSCRN   &kp UP     &kp RIGHT
                                                       &kp HOME  &kp PG_DN  &kp INS     &kp PG_UP  &kp END
