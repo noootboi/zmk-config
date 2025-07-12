@@ -240,7 +240,7 @@ conditional_layers {
    &trans         &trans        &kp RALT    &trans      &trans          &trans                                              &kp TILDE       &kp AMPERSAND &kp STAR      &kp LPAR      &kp PLUS        &kp F12
    &tog QWERTY    &kp LMETA     &kp LALT    &kp LCTRL   &kp LSHIFT      &trans                                              &kp LBRC        &kp DOLLAR    &kp PERCENT   &kp CARET     &kp DQT         &trans
    &tog GAME      &trans        &kp RALT    &trans      &trans          &trans                                              &kp RBRC        &kp EXCL      &kp AT        &kp HASH      &kp PIPE        &trans
-   &to BASE       &trans                                &tl 8           &trans                                              &kp RPAR        &kp UNDER                                 &trans          &trans 
+   &to BASE       &trans                                &mo 8           &trans                                              &kp RPAR        &kp UNDER                                 &trans          &trans 
                                           // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
                                                 &trans     &trans  &trans      &trans  &trans
