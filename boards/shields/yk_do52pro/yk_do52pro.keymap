@@ -165,9 +165,9 @@ conditional_layers {
   &kp LSHFT          &kp FSLH           &kp EQUAL        &kp SQT          &kp DOT           &kp MINUS                            &kp J            &kp M            &kp G            &kp W            &kp V            &kp RSHFT
   &tl 4 LCTRL        &kp LEFT_ALT                                         &reshift          &kp SPACE                            &kp R            &tl SYMBOL BACKSPACE                               &kp RIGHT_ALT    &kp ENTER
 
-                                             // DPAD  Left,     Down,      Middle,     Up,        Right
-                                                      &kp LEFT  &kp DOWN   &kp PSCRN   &kp UP     &kp RIGHT
-                                                      &kp HOME  &kp PG_DN  &kp INS     &kp PG_UP  &kp END
+                                             // DPAD  Left,     Down,      Middle,            Up,        Right
+                                                      &kp LEFT  &kp DOWN   &tl CONFIG PSCRN   &kp UP     &kp RIGHT
+                                                      &kp HOME  &kp PG_DN  &kp INS            &kp PG_UP  &kp END
       >;
     };
 //1
