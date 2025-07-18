@@ -150,8 +150,7 @@
 
 
 
-
-ZMK_COMBO(paste,    &kp LS(INS), LB1 LB2, ALL)  // paste, active on all layers
+  #include "includes/combos.overlay"
 
 conditional_layers {
         compatible = "zmk,conditional-layers";
