@@ -12,13 +12,15 @@
 
 
 
-#define COMBO_TERM_FAST 35
-#define COMBO_TERM_SLOW 40
-#define COMBO_PRIOR_IDLE 100
+#define COMBO_TERM_FAST 18
+#define COMBO_TERM_SLOW 30
+
+#define COMBO_IDLE_FAST 150
+#define COMBO_IDLE_SLOW 50
 
   combos {
     compatible = "zmk,combos";
-
+      /* Horizontal combos - left hand*/
         combo_esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
