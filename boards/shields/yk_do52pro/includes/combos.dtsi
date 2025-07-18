@@ -11,23 +11,11 @@
 
 
 
-
 #define COMBO_TERM_FAST 18
 #define COMBO_TERM_SLOW 30
 
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
 
-  combos {
-    compatible = "zmk,combos";
-      /* Horizontal combos - left hand*/
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-
-
-        
-    };
-
+/* Horizontal combos - left hand */
+ZMK_COMBO(esc,   &kp ESC,      LT3 LT2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
