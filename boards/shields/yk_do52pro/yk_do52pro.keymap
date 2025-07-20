@@ -151,10 +151,9 @@
 
 
   #include "includes/combos.dtsi"
-ZMK_MOD_MORPH(bs_del_num,
-    bindings = <&lt NUM BSPC>, <&kp DEL>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
+
+  
+ZMK_COMBO(esc,  &kp ESC, 0 1, ALL, 25)
 
 conditional_layers {
         compatible = "zmk,conditional-layers";
