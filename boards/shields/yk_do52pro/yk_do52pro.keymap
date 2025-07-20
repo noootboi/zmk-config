@@ -30,11 +30,11 @@
 #define HAS_MOUSE_KEYS
 #define HAS_MOUSE_TP
 
-#define BASE      0
+#define DEF       0
 #define GAME      1
 #define QWERTY    2
-#define NAVIG     3
-#define NUMBER    4
+#define NAV       3
+#define NUM       4
 #define SYMBOL    5
 #define MEDIA     6
 #define FUNCTION  7
