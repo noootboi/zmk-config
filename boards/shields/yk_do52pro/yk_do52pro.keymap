@@ -167,7 +167,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
    &kp LBKT          &kp Q         &hml RALT W &kp E        &kp R             &kp T                                                &kp Y           &kp U         &kp I        &lt SCROLL_TP O &lt MOUSE P     &lt SCROLL_TP EQUAL
    &kp RBKT          &hml LMETA A  &hml LALT S &hml LCTRL D &hml LSHIFT F     &kp G                                                &kp H           &hml LSHIFT J &hmr LCTRL K &hmr LALT L     &hmr LMETA SEMI &lt SCROLL_TP SQT
    &kp LSHFT         &kp Z         &hml RALT X &kp C        &kp V             &kp B                                                &kp N           &kp M         &kp COMMA    &hmr RALT DOT   &lt MOUSE FSLH  &lt SCROLL_TP BSLH
-   &kp LCTRL         &kp LMETA                              &lt FUNCTION ESC  &lt NAV   TAB                                        &lt MEDIA DEL   &reshift                             &kp LALT        &kp RALT
+   &kp LCTRL         &kp LMETA                              &lt FUNCTION ESC  &lt NAV   TAB                                        &lt MEDIA DEL   &kp M                                      &kp LALT        &kp RALT
                                              // DPAD  Left,     Down,      Middle,     Up,        Right
                                                       &kp LEFT  &kp DOWN   &kp PSCRN   &kp UP     &kp RIGHT
                                                       &kp HOME  &kp PG_DN  &kp INS     &kp PG_UP  &kp END
