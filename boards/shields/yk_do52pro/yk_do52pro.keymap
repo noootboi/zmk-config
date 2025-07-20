@@ -166,7 +166,13 @@ ZMK_TAP_DANCE(copy_cut, bindings = <&kp LC(INS)>, <&kp LC(X)>;
 
 // Disable line-wrap in your editor to see a "visualization" of the key layouts
 / {
-
+combos {
+        compatible = "zmk,combos";
+        combo_fslh {
+            timeout-ms = <150>;
+            key-positions = <32 44>;
+            bindings = <&kp ESC>;
+        };
 
   
   //0
