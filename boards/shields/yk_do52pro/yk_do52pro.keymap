@@ -153,17 +153,6 @@
 
 
 
-
-
-conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <4 5>;
-            then-layer = <8>;
-        };
-    };
-
-
   
   //0
   keymap {
