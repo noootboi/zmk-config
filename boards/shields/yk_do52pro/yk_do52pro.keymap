@@ -171,7 +171,7 @@ combos {
         combo_fslh {
             timeout-ms = <150>;
             key-positions = <32 44>;
-            bindings = <&kp ESC>;
+            bindings = <&kp FSLH>;
         };
 
   
