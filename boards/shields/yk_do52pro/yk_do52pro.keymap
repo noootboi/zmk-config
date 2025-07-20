@@ -270,7 +270,7 @@ conditional_layers {
    &trans         &kp C_BRI_DEC &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_INC   &trans                                              &kp KMLT        &kp KP_N7     &kp KP_N8   &kp KP_N9     &kp KMIN        &trans
    &tog QWERTY    &kp C_BRI_DEC &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_INC   &trans                                              &kp KDIV        &kp KP_N4     &kp KP_N5   &kp KP_N6     &kp KPLS        &trans
    &tog GAME      &trans        &trans        &trans        &trans          &trans                                              &kp KP_N0       &kp KP_N1     &kp KP_N2   &kp KP_N3     &kp KP_DOT      &trans
-   &to BASE       &trans                                    &kp HASH        &kp LBRC                                            &trans          &trans                                  &trans          &trans
+   &to DEF        &trans                                    &kp HASH        &kp LBRC                                            &trans          &trans                                  &trans          &trans
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
                                                 &trans     &trans  &trans      &trans  &trans 
