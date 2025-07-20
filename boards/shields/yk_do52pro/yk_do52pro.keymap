@@ -118,6 +118,29 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 #include "includes/combos.dtsi" // Must be sourced after HRM-combo hack.
 
 
+/* Magic-shift & auto-layers */
+
+// Tap: repeat after alpha, else sticky-shift |
+// Shift + tap/ double-tap: caps-word | Hold: shift.
+#define MAGIC_SHIFT &magic_shift LSHFT 0
+ZMK_HOLD_TAP(magic_shift, bindings = <&kp>, <&magic_shift_tap>;
+             flavor = "balanced"; tapping-term-ms = <200>;
+             quick-tap-ms = <QUICK_TAP_MS>;)
+ZMK_MOD_MORPH(magic_shift_tap, bindings = <&shift_repeat>, <&caps_word>;
+              mods = <(MOD_LSFT)>;)
+ZMK_ADAPTIVE_KEY(
+    shift_repeat, bindings = <&sk LSHFT>;
+    repeat {
+      trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
+      bindings = <&key_repeat>;
+      max-prior-idle-ms = <1200>;
+      strict-modifiers;
+    };)
+&caps_word { // Mods deactivate caps-word, requires PR #1451. [TODO: rebase]
+  /delete-property/ ignore-modifiers;
+};
+
+
 
 // Disable line-wrap in your editor to see a "visualization" of the key layouts
 / {
@@ -136,7 +159,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
   &kp TAB            &kp B              &kp Y            &kp O            &kp U             &kp O                                &kp X            &kp L            &kp D            &kp P            &kp F            &kp Z 
   &kp CAPSLOCK       &hml LGUI C        &hml LALT I      &hml LSHIFT E    &hml LCTRL A      &kp COMMA                            &kp K            &hmr LCTRL H     &hmr RSHIFT T    &hmr LALT N      &hmr LGUI S      &kp Q
   &kp LSHFT          &kp SEMI           &kp EQUAL        &kp SQT          &kp DOT           &kp MINUS                            &kp J            &kp M            &kp G            &kp W            &kp V            &kp RSHFT
-  &lt 4 TAB          &kp LEFT_ALT                                         &kp E             &kp SPACE                            &kp R            &kp BACKSPACE                                      &lt SYMBOL RIGHT_ALT    &kp ENTER
+  &lt 4 TAB          &kp LEFT_ALT                                         MAGIC_SHIFT       &kp SPACE                            &kp R            &kp BACKSPACE                                      &lt SYMBOL RIGHT_ALT    &kp ENTER
 
                                              // DPAD  Left,     Down,      Middle,            Up,               Right
                                                       &kp LEFT  &kp DOWN   &kp PSCRN          &kp UP            &kp RIGHT
