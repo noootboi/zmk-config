@@ -170,9 +170,10 @@ ZMK_TAP_DANCE(copy_cut, bindings = <&kp LC(INS)>, <&kp LC(X)>;
 combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <150>;
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <32 44>;
-            bindings = <&kp ESC>;
+            bindings = <&kp FSLH>;
         };
     };
   
