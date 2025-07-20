@@ -78,7 +78,7 @@
 
 #define QUICK_TAP_MS 250
 
-  #include "includes/combos.dtsi"
+ZMK_COMBO(esc,   &kp ESC,      LT3 LT2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 
 // Disable line-wrap in your editor to see a "visualization" of the key layouts
