@@ -78,6 +78,12 @@
 
 #define QUICK_TAP_MS 250
 
+#define COMBO_TERM_FAST 18
+#define COMBO_TERM_SLOW 30
+
+#define COMBO_IDLE_FAST 150
+#define COMBO_IDLE_SLOW 50
+
 
 // Disable line-wrap in your editor to see a "visualization" of the key layouts
 / {
@@ -150,7 +156,7 @@
 
 
 
-  #include "includes/combos.dtsi"
+
 
 
 conditional_layers {
