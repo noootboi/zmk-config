@@ -47,7 +47,7 @@
 
 #define RB0 42  // right-bottom row
 #define RB1 43
-#define RB2 42
+#define RB2 44
 #define RB3 45
 #define RB4 46
 #define RB5 47
