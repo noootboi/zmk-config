@@ -100,7 +100,7 @@
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS)                                 \
   ZMK_HOLD_TAP(NAME, bindings = <HOLD>, <TAP>; flavor = "balanced";            \
                tapping-term-ms = <280>; quick-tap-ms = <QUICK_TAP_MS>;         \
-               require-prior-idle-ms = <150>; hold-trigger-on-release;         \
+               require-prior-idle-ms = <200>; hold-trigger-on-release;         \
                hold-trigger-key-positions = <TRIGGER_POS>;)
 
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // Left-hand HRMs.
@@ -242,7 +242,7 @@ ZMK_TAP_DANCE(copy_cut, bindings = <&kp LC(INS)>, <&kp LC(X)>;
    &trans       &kp LBRC      &kp LBKT    &kp RBKT    &kp RBRC        &trans                                              &kp GRAVE       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL       &kp F12
    &trans       &kp LMETA     &kp LALT    &kp LCTRL   &kp LSHIFT      &trans                                              &kp EQUAL       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT         &trans
    &trans       &trans        &kp RALT    &trans      &trans          &trans                                              &kp MINUS       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BSLH        &trans
-   &trans       &trans                                &trans          &trans                                              &kp NUMBER_0    &kp BACKSPACE                             &trans          &trans 
+   &trans       &trans                                &trans          &trans                                              &kp BACKSPACE   &kp NUMBER_0                              &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
                                                 &trans     &trans  &trans      &trans  &trans 
