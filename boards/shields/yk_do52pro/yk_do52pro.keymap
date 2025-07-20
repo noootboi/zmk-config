@@ -141,14 +141,13 @@ ZMK_ADAPTIVE_KEY(
 };
 
 
+// Define mod-morph with a *single* mod trigger for less repetition.
+#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2)                            \
+  ZMK_MOD_MORPH(NAME, mods = <(MOD_L##MOD | MOD_R##MOD)>;                      \
+                bindings = <BINDING1>, <BINDING2>;)
 
 
-
-
-// Disable line-wrap in your editor to see a "visualization" of the key layouts
-/ {
-
-  // Tap: qmark | Shift + tap: excl.
+// Tap: qmark | Shift + tap: excl.
 SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
 
 // Tap: left/right parenthesis | Shft + tap: less-than/greater-than.
@@ -163,6 +162,10 @@ ZMK_MOD_MORPH(bs_del, bindings = <&kp BSPC>, <&kp DEL>;
 // Tap: copy | double-tap: cut.
 ZMK_TAP_DANCE(copy_cut, bindings = <&kp LC(INS)>, <&kp LC(X)>;
               tapping-term-ms = <200>;)
+
+
+// Disable line-wrap in your editor to see a "visualization" of the key layouts
+/ {
 
 
   
