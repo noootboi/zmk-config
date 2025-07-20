@@ -78,7 +78,7 @@
 
 #define QUICK_TAP_MS 250
 
-ZMK_COMBO(esc,  &kp ESC, 0 1, ALL, 25)
+  #include "includes/combos.dtsi"
 
 
 // Disable line-wrap in your editor to see a "visualization" of the key layouts
@@ -152,7 +152,7 @@ ZMK_COMBO(esc,  &kp ESC, 0 1, ALL, 25)
 
 
 
-  #include "includes/combos.dtsi"
+
 
 
 conditional_layers {
