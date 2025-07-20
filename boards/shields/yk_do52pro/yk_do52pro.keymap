@@ -101,7 +101,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
 /* Combos, leader key sequences, mouse emulation */
 
-  #include "includes/combos.dtsi"
+ZMK_COMBO(copy,  &kp LC(C), LB2 LB3)
 
 
 
