@@ -174,7 +174,7 @@ conditional_layers {
   &kp TAB            &kp B              &kp Y            &kp O            &kp U             &qmark                               &kp X            &kp L            &kp D            &kp P            &kp F            &kp Z 
   &kp CAPSLOCK       &hml LGUI C        &hml LALT I      &hml LSHIFT E    &hml LCTRL A      &kp COMMA                            &kp K            &hmr LCTRL H     &hmr RSHIFT T    &hmr LALT N      &hmr LGUI S      &kp Q
   &kp LSHFT          &kp SEMI           &kp EQUAL        &kp SQT          &kp DOT           &kp MINUS                            &kp J            &kp M            &kp G            &kp W            &kp V            &kp RSHFT
-  &tl 4 LCTRL        &kp LEFT_ALT                                         &reshift          &kp SPACE                            &kp R            &tl SYMBOL BACKSPACE                               &kp RIGHT_ALT    &kp ENTER
+  &tl 4 TAB          &kp LEFT_ALT                                         &reshift          &kp SPACE                            &kp R            &kp BACKSPACE                                      &tl SYMBOL RIGHT_ALT    &kp ENTER
 
                                              // DPAD  Left,     Down,      Middle,            Up,               Right
                                                       &kp LEFT  &kp DOWN   &kp PSCRN          &kp UP            &kp RIGHT
@@ -235,7 +235,7 @@ conditional_layers {
    &trans       &kp LBRC      &kp LBKT    &kp RBKT    &kp RBRC        &trans                                              &kp GRAVE       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL       &kp F12
    &trans       &kp LMETA     &kp LALT    &kp LCTRL   &kp LSHIFT      &trans                                              &kp EQUAL       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT         &trans
    &trans       &trans        &kp RALT    &trans      &trans          &trans                                              &kp MINUS       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BSLH        &trans
-   &trans       &trans                                &trans          &trans                                              &kp NUMBER_0    &kp MINUS                                 &trans          &trans 
+   &trans       &trans                                &trans          &trans                                              &kp NUMBER_0    &kp BACKSPACE                             &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
                                                 &trans     &trans  &trans      &trans  &trans 
@@ -247,14 +247,15 @@ conditional_layers {
       display-name = "Symbol";
           bindings = <
 //|--------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
-   &studio_unlock &kp F1        &kp F2      &kp F3      &kp F4          &kp F5                                              &kp F6          &kp F7        &kp F8        &kp F9        &kp F10         &kp F11
-   &trans         &trans        &kp RALT    &trans      &trans          &trans                                              &kp TILDE       &kp AMPERSAND &kp STAR      &kp LPAR      &kp PLUS        &kp F12
-   &tog QWERTY    &kp LMETA     &kp LALT    &kp LCTRL   &kp LSHIFT      &trans                                              &kp LBRC        &kp DOLLAR    &kp PERCENT   &kp CARET     &kp DQT         &trans
-   &tog GAME      &trans        &kp RALT    &trans      &trans          &trans                                              &kp RBRC        &kp EXCL      &kp AT        &kp HASH      &kp PIPE        &trans
-   &to BASE       &trans                                &mo 8           &trans                                              &kp RPAR        &kp UNDER                                 &trans          &trans 
-                                          // DPAD Left,      Down,   Middle,     Up,     Right
+   &studio_unlock  &trans        &trans      &trans      &trans          &trans                                              &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans
+   &trans          &trans        &trans      &trans      &trans          &trans                                              &bt BT_CLR      &bt BT_PRV    &out OUT_USB  &out OUT_BLE  &bt BT_NXT      &trans
+   &sys_reset      &trans        &trans      &trans      &trans          &trans                                              &bt BT_CLR_ALL  &out OUT_TOG  &trans        &trans        &trans          &sys_reset
+   &bootloader     &trans        &trans      &trans      &trans          &trans                                              &bt BT_DISC 0   &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4   &bootloader
+   &trans          &trans                                &trans          &trans                                              &trans          &trans                                    &trans          &trans 
+                                        // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
-                                                &trans     &trans  &trans      &trans  &trans
+                                                &trans     &trans  &trans      &trans  &trans 
+
       >;
     };
  //6
@@ -294,14 +295,14 @@ conditional_layers {
       display-name = "Configuration";
       bindings = <
 //|---------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-------------|-------------|---------------|------------|
-   &studio_unlock  &trans        &trans      &trans      &trans          &trans                                              &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans
-   &trans          &trans        &trans      &trans      &trans          &trans                                              &bt BT_CLR      &bt BT_PRV    &out OUT_USB  &out OUT_BLE  &bt BT_NXT      &trans
-   &sys_reset      &trans        &trans      &trans      &trans          &trans                                              &bt BT_CLR_ALL  &out OUT_TOG  &trans        &trans        &trans          &sys_reset
-   &bootloader     &trans        &trans      &trans      &trans          &trans                                              &bt BT_DISC 0   &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4   &bootloader
-   &trans          &trans                                &trans          &trans                                              &trans          &trans                                    &trans          &trans 
-                                        // DPAD Left,      Down,   Middle,     Up,     Right
+   &studio_unlock &kp F1        &kp F2      &kp F3      &kp F4          &kp F5                                              &kp F6          &kp F7        &kp F8        &kp F9        &kp F10         &kp F11
+   &trans         &trans        &kp RALT    &trans      &trans          &trans                                              &kp TILDE       &kp AMPERSAND &kp STAR      &kp LPAR      &kp PLUS        &kp F12
+   &tog QWERTY    &kp LMETA     &kp LALT    &kp LCTRL   &kp LSHIFT      &trans                                              &kp LBRC        &kp DOLLAR    &kp PERCENT   &kp CARET     &kp DQT         &trans
+   &tog GAME      &trans        &kp RALT    &trans      &trans          &trans                                              &kp RBRC        &kp EXCL      &kp AT        &kp HASH      &kp PIPE        &trans
+   &to BASE       &trans                                &mo 8           &trans                                              &kp RPAR        &kp UNDER                                 &trans          &trans 
+                                          // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
-                                                &trans     &trans  &trans      &trans  &trans 
+                                                &trans     &trans  &trans      &trans  &trans
       >;
     };
 
