@@ -49,7 +49,7 @@
 
 #ifdef HAS_MOUSE_TP
   // We store the trackpoint settings in a separate file
-  // to make organization a little easier.
+  // to make organization a litlte easier.
   #include "includes/mouse_tp.dtsi"
 #endif  // HAS_MOUSE_TP
 
@@ -136,11 +136,11 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
   &kp TAB            &kp B              &kp Y            &kp O            &kp U             &kp O                                &kp X            &kp L            &kp D            &kp P            &kp F            &kp Z 
   &kp CAPSLOCK       &hml LGUI C        &hml LALT I      &hml LSHIFT E    &hml LCTRL A      &kp COMMA                            &kp K            &hmr LCTRL H     &hmr RSHIFT T    &hmr LALT N      &hmr LGUI S      &kp Q
   &kp LSHFT          &kp SEMI           &kp EQUAL        &kp SQT          &kp DOT           &kp MINUS                            &kp J            &kp M            &kp G            &kp W            &kp V            &kp RSHFT
-  &tl 4 TAB          &kp LEFT_ALT                                         &reshift          &kp SPACE                            &kp R            &kp BACKSPACE                                      &tl SYMBOL RIGHT_ALT    &kp ENTER
+  &lt 4 TAB          &kp LEFT_ALT                                         &reshift          &kp SPACE                            &kp R            &kp BACKSPACE                                      &lt SYMBOL RIGHT_ALT    &kp ENTER
 
                                              // DPAD  Left,     Down,      Middle,            Up,               Right
                                                       &kp LEFT  &kp DOWN   &kp PSCRN          &kp UP            &kp RIGHT
-                                                      &kp HOME  &kp PG_DN  &kp INS            &tl CONFIG PG_UP  &kp END
+                                                      &kp HOME  &kp PG_DN  &kp INS            &lt CONFIG PG_UP  &kp END
       >;
     };
 //1
@@ -152,7 +152,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
    &kp LBKT          &kp Q         &kp W       &kp E        &kp R             &kp T                                               &kp Y           &kp U         &kp I        &kp O           &kp P           &kp EQUAL
    &kp RBKT          &kp A         &kp S       &kp D        &kp F             &kp G                                               &kp H           &kp J         &kp K        &kp L           &kp SEMI        &kp SQT
    &kp LSHFT         &kp Z         &kp X       &kp C        &kp V             &kp B                                               &kp N           &kp M         &kp COMMA    &kp DOT         &kp FSLH        &kp BSLH
-   &kp LCTRL         &kp LMETA                              &kp ESC           &tl MEDIA TAB                                       &mkp DEL        &mkp RET                                   &kp LALT        &kp RALT
+   &kp LCTRL         &kp LMETA                              &kp ESC           &lt MEDIA TAB                                       &mkp DEL        &mkp RET                                   &kp LALT        &kp RALT
                                              // DPAD  Left,     Down,      Middle,     Up,        ,Right
                                                       &kp LEFT  &kp DOWN   &kp PSCRN   &kp UP     &kp RIGHT
                                                       &kp HOME  &kp PG_DN  &kp INS     &kp PG_UP  &kp END
@@ -164,10 +164,10 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
       bindings = <
 //|-----------------|-------------|-----------|------------|-----------------|----------------|--------------|   |---------------|---------------|-------------|-----------|-------------|---------------|------------|
    &kp GRAVE         &kp N1        &kp N2      &kp N3       &kp N4            &kp N5                                               &kp N6          &kp N7        &kp N8       &kp N9          &kp N0          &kp MINUS
-   &kp LBKT          &kp Q         &hml RALT W &kp E        &kp R             &kp T                                                &kp Y           &kp U         &kp I        &tl SCROLL_TP O &tl MOUSE P     &tl SCROLL_TP EQUAL
-   &kp RBKT          &hml LMETA A  &hml LALT S &hml LCTRL D &hml LSHIFT F     &kp G                                                &kp H           &hml LSHIFT J &hmr LCTRL K &hmr LALT L     &hmr LMETA SEMI &tl SCROLL_TP SQT
-   &kp LSHFT         &kp Z         &hml RALT X &kp C        &kp V             &kp B                                                &kp N           &kp M         &kp COMMA    &hmr RALT DOT   &tl MOUSE FSLH  &tl SCROLL_TP BSLH
-   &kp LCTRL         &kp LMETA                              &tl FUNCTION ESC  &tl NAV   TAB                                        &tl MEDIA DEL   &reshift                             &kp LALT        &kp RALT
+   &kp LBKT          &kp Q         &hml RALT W &kp E        &kp R             &kp T                                                &kp Y           &kp U         &kp I        &lt SCROLL_TP O &lt MOUSE P     &lt SCROLL_TP EQUAL
+   &kp RBKT          &hml LMETA A  &hml LALT S &hml LCTRL D &hml LSHIFT F     &kp G                                                &kp H           &hml LSHIFT J &hmr LCTRL K &hmr LALT L     &hmr LMETA SEMI &lt SCROLL_TP SQT
+   &kp LSHFT         &kp Z         &hml RALT X &kp C        &kp V             &kp B                                                &kp N           &kp M         &kp COMMA    &hmr RALT DOT   &lt MOUSE FSLH  &lt SCROLL_TP BSLH
+   &kp LCTRL         &kp LMETA                              &lt FUNCTION ESC  &lt NAV   TAB                                        &lt MEDIA DEL   &reshift                             &kp LALT        &kp RALT
                                              // DPAD  Left,     Down,      Middle,     Up,        Right
                                                       &kp LEFT  &kp DOWN   &kp PSCRN   &kp UP     &kp RIGHT
                                                       &kp HOME  &kp PG_DN  &kp INS     &kp PG_UP  &kp END
@@ -212,7 +212,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
    &studio_unlock  &trans        &trans      &trans      &trans          &trans                                              &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans
    &trans          &trans        &trans      &trans      &trans          &trans                                              &bt BT_CLR      &bt BT_PRV    &out OUT_USB  &out OUT_BLE  &bt BT_NXT      &trans
    &sys_reset      &trans        &trans      &trans      &trans          &trans                                              &bt BT_CLR_ALL  &out OUT_TOG  &trans        &trans        &trans          &sys_reset
-   &bootloader     &trans        &trans      &trans      &trans          &trans                                              &bt BT_DISC 0   &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4   &bootloader
+   &booltoader     &trans        &trans      &trans      &trans          &trans                                              &bt BT_DISC 0   &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4   &booltoader
    &trans          &trans                                &trans          &trans                                              &trans          &trans                                    &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
@@ -245,7 +245,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
    &studio_unlock    &trans        &trans      &trans      &trans          &trans                                              &trans          &trans        &trans      &trans        &trans          &trans
    &trans            &trans        &trans      &trans      &trans          &trans                                              &trans          &kp F7        &kp F8      &kp F9        &kp F10         &trans
    &trans            &trans        &trans      &trans      &trans          &trans                                              &trans          &kp F4        &kp F5      &kp F6        &kp F11         &trans
-   &bootloader       &trans        &trans      &trans      &trans          &trans                                              &trans          &kp F1        &kp F2      &kp F3        &kp F12         &trans
+   &booltoader       &trans        &trans      &trans      &trans          &trans                                              &trans          &kp F1        &kp F2      &kp F3        &kp F12         &trans
    &trans            &trans                                &trans          &trans                                              &trans          &trans                                  &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans 
