@@ -138,7 +138,7 @@ ZMK_ADAPTIVE_KEY(
     };)
 &caps_word { // Mods deactivate caps-word, requires PR #1451. [TODO: rebase]
   /delete-property/ ignore-modifiers;
-}
+};
 
 
 
