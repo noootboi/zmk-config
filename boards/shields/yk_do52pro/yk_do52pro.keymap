@@ -169,11 +169,18 @@ ZMK_TAP_DANCE(copy_cut, bindings = <&kp LC(INS)>, <&kp LC(X)>;
 
 combos {
         compatible = "zmk,combos";
-        combo_esc {
+        combo_fslh {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <32 44>;
             bindings = <&kp FSLH>;
+        };
+
+        combo_star {
+            timeout-ms = <COMBO_TERM_SLOW>;
+            require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+            key-positions = <20 32>;
+            bindings = <&kp STAR>;
         };
     };
   
@@ -193,7 +200,7 @@ combos {
 
                                              // DPAD  Left,     Down,      Middle,            Up,               Right
                                                       &kp LEFT  &kp DOWN   &kp PSCRN          &kp UP            &kp RIGHT
-                                                      &kp HOME  &kp PG_DN  &kp INS            &lt CONFIG PG_UP  &kp END
+                                                      &kp HOME  &kp PG_DN  &kp INS            &lt CONFIG PG_UP  &kp D
       >;
     };
 //1
