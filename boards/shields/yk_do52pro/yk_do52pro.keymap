@@ -191,16 +191,14 @@ combos {
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
             key-positions = <20 32>;
             bindings = <&kp STAR>;
-        };
-        
+        };    
 
         combo_snum {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-            key-positions = <20 32>;
+            key-positions = <22 34>;
             bindings = <SMART_NUM>;
-
-    };
+        };
 
 };
   
