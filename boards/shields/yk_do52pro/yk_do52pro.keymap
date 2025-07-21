@@ -197,7 +197,7 @@ combos {
         timeout-ms = <COMBO_TERM_SLOW>;
         require-prior-idle-ms = <COMBO_IDLE_SLOW>;
         key-positions = <22 34>;
-        bindings = <&smart_num>; // not SMART_NUM
+        bindings = <SMART_NUM>; // not SMART_NUM
         };
     };
 
