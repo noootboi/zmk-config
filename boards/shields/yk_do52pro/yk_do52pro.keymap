@@ -138,7 +138,16 @@ ZMK_ADAPTIVE_KEY(
     };)
 &caps_word { // Mods deactivate caps-word, requires PR #1451. [TODO: rebase]
   /delete-property/ ignore-modifiers;
-};
+}
+
+
+
+// Tap: num-word | double-tap: sticky num-layer | Hold: num-layer.
+#define SMART_NUM &smart_num NUM 0
+ZMK_HOLD_TAP(smart_num, bindings = <&mo>, <&num_dance>; flavor = "balanced";
+             tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
+ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
+              tapping-term-ms = <200>;)
 
 
 // Define mod-morph with a *single* mod trigger for less repetition.
@@ -198,7 +207,7 @@ combos {
   &kp TAB            &kp B              &kp Y            &kp O            &kp U             &qexcl                               &kp X            &kp L            &kp D            &kp P            &kp F            &kp Z 
   &kp CAPSLOCK       &hml LGUI C        &hml LALT I      &hml LSHIFT E    &hml LCTRL A      &kp COMMA                            &kp K            &hmr LCTRL H     &hmr RSHIFT T    &hmr LALT N      &hmr LGUI S      &kp Q
   &kp LSHFT          &kp SEMI           &kp EQUAL        &kp SQT          &kp DOT           &kp MINUS                            &kp J            &kp M            &kp G            &kp W            &kp V            &kp RSHFT
-  &lt 4 TAB          &kp LEFT_ALT                                         MAGIC_SHIFT       &kp SPACE                            &kp R            &kp BACKSPACE                                      &lt SYMBOL RIGHT_ALT    &kp ENTER
+  &lt 4 TAB          &kp LEFT_ALT                                         MAGIC_SHIFT       &kp SPACE                            &kp R            &kp BACKSPACE                                      &lt SYMBOL RIGHT_ALT    SMART_NUM
 
                                              // DPAD  Left,     Down,      Middle,            Up,               Right
                                                       &kp LEFT  &kp DOWN   &kp PSCRN          &kp UP            &kp RIGHT
