@@ -174,7 +174,7 @@ ZMK_TAP_DANCE(copy_cut, bindings = <&kp LC(INS)>, <&kp LC(X)>;
 
 
 // Disable line-wrap in your editor to see a "visualization" of the key layouts
-
+/ {
 
 combos {
         compatible = "zmk,combos";
@@ -201,6 +201,8 @@ combos {
             bindings = <SMART_NUM>;
 
     };
+
+};
   
   //0
   keymap {
