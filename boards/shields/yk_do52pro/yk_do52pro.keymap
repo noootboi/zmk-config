@@ -138,7 +138,7 @@ ZMK_ADAPTIVE_KEY(
     };)
 &caps_word { // Mods deactivate caps-word, requires PR #1451. [TODO: rebase]
   /delete-property/ ignore-modifiers;
-};
+}
 
 
 
@@ -174,7 +174,7 @@ ZMK_TAP_DANCE(copy_cut, bindings = <&kp LC(INS)>, <&kp LC(X)>;
 
 
 // Disable line-wrap in your editor to see a "visualization" of the key layouts
-/ {
+
 
 combos {
         compatible = "zmk,combos";
