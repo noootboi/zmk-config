@@ -212,7 +212,7 @@ combos {
 
                                              // DPAD  Left,     Down,      Middle,            Up,               Right
                                                       &kp LEFT  &kp DOWN   &kp PSCRN          &kp UP            &kp RIGHT
-                                                      &kp HOME  &kp PG_DN  &tog 1            &lt CONFIG PG_UP  &kp END
+                                                      &kp HOME  &kp PG_DN  &to  1            &lt CONFIG PG_UP  &kp END
       >;
     };
 //1
@@ -227,7 +227,7 @@ combos {
    &kp LCTRL         &kp LMETA                              &kp SPACE         &lt MEDIA TAB                                       &mkp DEL        &mkp RET                                   &kp LALT        &kp RALT
                                              // DPAD  Left,     Down,      Middle,     Up,        ,Right
                                                       &kp LEFT  &kp DOWN   &kp PSCRN   &kp UP     &kp RIGHT
-                                                      &kp HOME  &kp PG_DN  &tog 0     &kp PG_UP  &kp END
+                                                      &kp HOME  &kp PG_DN  &to 0       &kp PG_UP  &kp END
       >;
     };
 //2
@@ -242,7 +242,7 @@ combos {
    &kp LCTRL         &kp LMETA                              &lt FUNCTION ESC  &lt NAV   TAB                                        &lt MEDIA DEL   &kp M                                      &kp LALT        &kp RALT
                                              // DPAD  Left,     Down,      Middle,     Up,        Right
                                                       &kp LEFT  &kp DOWN   &kp PSCRN   &kp UP     &kp RIGHT
-                                                      &kp HOME  &kp PG_DN  &kp INS     &kp PG_UP  &kp END
+                                                      &kp HOME  &kp PG_DN  &to 0       &kp PG_UP  &kp END
       >;
     };
 //3
@@ -257,7 +257,7 @@ combos {
    &trans       &trans                                &caps_word      &kp LBKT                                             &trans          &trans                                  &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
-                                                &trans     &trans  &trans      &trans  &trans 
+                                                &trans     &trans  &to 0       &trans  &trans 
       >;
     };
 
@@ -275,7 +275,7 @@ combos {
    &trans        &trans                                 &trans           &trans                                               &kp BACKSPACE   &kp NUMBER_0                              &trans           &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans      &trans   &trans       &trans   &trans  
-                                                &trans      &trans   &trans       &trans   &trans 
+                                                &trans      &trans   &to 0        &trans   &trans 
       >;
     };
 
@@ -291,7 +291,7 @@ combos {
    &trans          &trans                                &trans          &trans                                              &trans          &trans                                    &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
-                                                &trans     &trans  &trans      &trans  &trans 
+                                                &trans     &trans  &to 0       &trans  &trans 
 
       >;
     };
@@ -307,7 +307,7 @@ combos {
    &to DEF        &trans                                    &kp HASH        &kp LBRC                                            &trans          &trans                                  &trans          &trans
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
-                                                &trans     &trans  &trans      &trans  &trans 
+                                                &trans     &trans  &to 0       &trans  &trans 
       >;
     };
 
@@ -324,7 +324,7 @@ combos {
    &trans            &trans                                &trans          &trans                                              &trans          &trans                                  &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans 
-                                                &trans     &trans  &trans      &trans  &trans
+                                                &trans     &trans  &to 0       &trans  &trans
       >;
     };
 //8
@@ -339,7 +339,7 @@ combos {
    &to DEF        &trans                                &mo 8           &trans                                              &kp RPAR        &kp UNDER                                 &trans          &trans 
                                           // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
-                                                &trans     &trans  &trans      &trans  &trans
+                                                &trans     &trans  &to 0       &trans  &trans
       >;
     };
 
@@ -355,7 +355,7 @@ combos {
    &trans       &trans                                &trans          &trans                                              &mkp MCLK       &mkp RCLK                                 &trans          &trans 
                                            // DPAD Left,      Down,   Middle,     Up,     Right
                                                    &trans     &trans  &trans      &trans  &trans
-                                                   &trans     &trans  &trans      &trans  &trans
+                                                   &trans     &trans  &to 0       &trans  &trans
          >;
        };
 
@@ -371,7 +371,7 @@ combos {
    &trans        &trans                                &trans          &trans                                              &mkp MCLK       &mkp RCLK                               &trans          &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans     &trans  &trans      &trans  &trans  
-                                                &trans     &trans  &trans      &trans  &trans           
+                                                &trans     &trans  &to 0       &trans  &trans           
       >;
     };
 
