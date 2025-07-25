@@ -269,10 +269,10 @@ combos {
         bindings = <
 //|------------|-------------|-----------|-----------|---------------|---------------|---------------|   |---------------|---------------|-------------|-------------|-------------|---------------|------------|
    &kp F12      &kp F1        &kp F2      &kp F3      &kp F4          &kp F5                                              &kp F6          &kp F7        &kp F8        &kp F9        &kp F10         &kp F11         
-   &trans        &trans         &trans       &trans       &trans           &trans                                              &kp GRAVE       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL       &kp F12
-   &trans        &trans         &trans       &trans       &trans           &trans                                               &kp EQUAL       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT         &trans
-   &trans        &trans         &trans       &trans       &trans           &trans                                               &kp MINUS       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BSLH        &trans
-   &trans        &trans                                 &trans           &trans                                               &kp BACKSPACE   &kp NUMBER_0                              &trans           &trans 
+   &trans        &trans         &trans       &trans       &trans           &trans                                               &trans         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL       &trans
+   &trans        &trans         &trans       &trans       &trans           &trans                                               &trans         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp DOT         &trans
+   &trans        &trans         &trans       &trans       &trans           &trans                                               &trans         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ASTERISK    &trans
+   &trans        &trans                                 &trans           &trans                                                 &kp BACKSPACE   &kp NUMBER_0                              &trans           &trans 
                                         // DPAD Left,      Down,   Middle,     Up,     Right
                                                 &trans      &trans   &trans       &trans   &trans  
                                                 &trans      &trans   &to 0        &trans   &trans 
